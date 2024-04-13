@@ -8,21 +8,18 @@ var indexRouter = require('./routes/index');
 var Database = require('./config/mongoose');
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 const corsOptions = {
   origin: ['http://localhost:5173','https://tool-setup-fe.vercel.app/'],
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
