@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = 'mongodb+srv://prajapatiankur8349:8gWXnlNhA9LtZ7JH@cluster0.r9fef6l.mongodb.net/beatstream'; 
+const connectionString = 'mongodb+srv://prajapatiankur8349:8gWXnlNhA9LtZ7JH@cluster0.r9fef6l.mongodb.net/Axiamatic'; 
 
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
