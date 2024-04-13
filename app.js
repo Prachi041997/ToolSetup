@@ -16,10 +16,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: ['http://localhost:5173','https://tool-setup-fe.vercel.app/'],
+  origin: ['http://localhost:5173','https://tool-setup-fe.vercel.app'],
 };
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
